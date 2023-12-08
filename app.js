@@ -26,8 +26,8 @@ function game() {
             playerScoreText.textContent = `Player score: ${playerScore}`;
             computerScoreText.textContent = `Computer score: ${computerScore}`;
             endGame();
-        })
-    })
+        });
+    });
 
 
     function playRound(playerSelection, computerSelection) {
@@ -42,7 +42,7 @@ function game() {
         }
     }
 
-    const container = document.querySelector('.container')
+    const container = document.querySelector('.container');
     const resultsDiv = document.createElement('div');
     resultsDiv.style.marginTop = '20px';
     container.appendChild(resultsDiv);
@@ -75,10 +75,11 @@ function game() {
     function createPlayAgainButton() {
         const playAgainButton = document.createElement('button');
         resultsDiv.appendChild(playAgainButton);
+        playAgainButton.classList.add('play-again');
         playAgainButton.textContent = 'Play Again';
         playAgainButton.addEventListener('click', () => {
             location.reload();
-        })
+        });
 
     }
 
